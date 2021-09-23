@@ -13,7 +13,7 @@ private:
 public:	
 	void init();
 	int get_num();
-	void data_set();
-	void data_get();
+	void vvod();
+	void print();
 	
 };

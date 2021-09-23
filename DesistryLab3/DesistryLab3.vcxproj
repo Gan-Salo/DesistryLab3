@@ -141,10 +141,16 @@
   <ItemGroup>
     <ClCompile Include="Cabinet.cpp" />
     <ClCompile Include="DesistryLab3.cpp" />
+    <ClCompile Include="Doctor.cpp" />
+    <ClCompile Include="Dolznost.cpp" />
+    <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Usluga.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cabinet.h" />
+    <ClInclude Include="Doctor.h" />
+    <ClInclude Include="Dolznost.h" />
+    <ClInclude Include="Patient.h" />
     <ClInclude Include="Usluga.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

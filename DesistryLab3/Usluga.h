@@ -12,8 +12,8 @@ class Usluga
 	public:
 		void init();
 		string get_title();
-		void data_set();
-		void data_get();
+		void vvod();
+		void print();
 
 };
 

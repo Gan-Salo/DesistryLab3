@@ -12,7 +12,7 @@ string Usluga::get_title()
 	return title;
 }
 
-void Usluga::data_set()
+void Usluga::vvod()
 {
 	cout << "_Ввод услуги_\n";
 	cout << "Введите название услуги: ";
@@ -23,7 +23,7 @@ void Usluga::data_set()
 	
 }
 
-void Usluga::data_get()
+void Usluga::print()
 {
 	cout << "_Услуга_\n";
 	cout << "Название услуги: ";

@@ -12,7 +12,7 @@ int Cabinet::get_num()
 	return number;
 }
 
-void Cabinet::data_set()
+void Cabinet::vvod()
 {
 	cout << "_Ввод кабинета_\n";
 	cout << "Введите номер кабинета: ";
@@ -24,7 +24,7 @@ void Cabinet::data_set()
 	cout << "\n\n";
 }
 
-void Cabinet::data_get()
+void Cabinet::print()
 {
 	cout << "_Кабинет_\n";
 	cout << "Номер: ";
