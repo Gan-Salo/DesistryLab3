@@ -1,20 +1,50 @@
-﻿// DesistryLab3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
+#include <Windows.h>
+#include "Usluga.h"
+#include "Doctor.h"
+#include "Patient.h"
+#include "Cabinet.h"
+#include "Zapis.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    Cabinet test_cab1, test_cab2;
+    test_cab1.init();
+    test_cab2.vvod();
+    test_cab1.print();
+    test_cab2.print();
+
+    Usluga test_usl1, test_usl2;
+    test_usl1.init();
+    test_usl2.vvod();
+    test_usl1.print();
+    test_usl2.print();
+
+    Dolznost test_dl1, test_dl2;
+    test_dl1.init();
+    test_dl2.vvod();
+    test_dl1.print();
+    test_dl2.print();
+
+    Patient test_pat1, test_pat2;
+    test_pat1.init();
+    test_pat2.vvod();
+    test_pat1.print();
+    test_pat2.print();
+
+    Doctor test_doc1, test_doc2;
+    test_doc1.init();
+    test_doc2.vvod();
+    test_doc1.print();
+    test_doc2.print();
+
+    Zapis test_zap1, test_zap2;
+    test_zap1.init();
+    test_zap2.vvod();
+    test_zap1.print();
+    test_zap2.print();
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
