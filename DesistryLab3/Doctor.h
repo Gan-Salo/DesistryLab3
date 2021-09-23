@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "dolznost.h"
+#include "Dolznost.h"
 
 using namespace std;
 
@@ -11,7 +11,7 @@ private:
 	string fio;			//ФИО
 	int age;			//Возраст
 	string phone;		//Номер телефона
-	dolznost dolzn;		//Название должности
+	Dolznost dolzn;		//Название должности
 	string kategory;	//Категория 
 public:
 	void init();

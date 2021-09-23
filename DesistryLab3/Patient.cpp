@@ -1,11 +1,10 @@
 #include "Patient.h"
 
-
 void Patient::init()
 {	
 	fio = "Легостаев К.В.";
 	age= 35;
-	fio = "+79134567890";
+	phone = "+79134567890";
 }
 
 string Patient::get_fio()
