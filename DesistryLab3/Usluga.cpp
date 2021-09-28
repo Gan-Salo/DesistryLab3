@@ -1,10 +1,16 @@
 #include "Usluga.h"
 
-void Usluga::init()
+Usluga::Usluga()
 {
 	title = "Чистка зубов";
 	cost = 400;
 	
+}
+
+Usluga::Usluga(string title, int cost)
+{
+	this->title = title;
+	this->cost = cost;
 }
 
 string Usluga::get_title()

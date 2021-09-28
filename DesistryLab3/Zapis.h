@@ -17,7 +17,8 @@ private:
 	Cabinet cabnum;		//Номер кабинета приёма
 	string date;		//Дата и время приема
 public:
-	void init();
+	Zapis();
+	Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, string date);
 	void vvod();
 	void print();
 };

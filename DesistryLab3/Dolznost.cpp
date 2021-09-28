@@ -1,10 +1,16 @@
 #include "Dolznost.h"
 
-void Dolznost::init()
+Dolznost::Dolznost()
 {
 	title = "Терапевт";
 	podrazdel = "Мед. персонал";
 
+}
+
+Dolznost::Dolznost(string title, string podrazdel)
+{
+	this->title = title;
+	this->podrazdel = podrazdel;	
 }
 
 string Dolznost::get_title()

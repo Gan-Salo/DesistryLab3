@@ -11,7 +11,8 @@ private:
 	string title;		//Название должности
 	string podrazdel;	//Подразделение, к которому относится должность
 public:
-	void init();
+	Dolznost();
+	Dolznost(string title, string podrazdel);
 	string get_title();
 	void vvod();
 	void print();

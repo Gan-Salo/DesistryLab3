@@ -12,12 +12,23 @@ int main()
     SetConsoleOutputCP(1251);
 
     Cabinet test_cab1, test_cab2;
-    test_cab1.init();
     test_cab2.vvod();
     test_cab1.print();
     test_cab2.print();
 
-    Usluga test_usl1, test_usl2;
+    int n = 3;
+    Cabinet test_cab3[4];
+    
+
+    Cabinet* test_cab4 = new Cabinet[n];
+    for (int i = 0; i < n; i++)
+    {
+        test_cab4[i].print();
+    }
+
+    delete[] test_cab4;
+
+    /*Usluga test_usl1, test_usl2;
     test_usl1.init();
     test_usl2.vvod();
     test_usl1.print();
@@ -45,6 +56,8 @@ int main()
     test_zap1.init();
     test_zap2.vvod();
     test_zap1.print();
-    test_zap2.print();
+    test_zap2.print();*/
+
+
 }
 

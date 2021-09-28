@@ -1,10 +1,17 @@
 #include "Cabinet.h"
 
-void Cabinet::init()
+Cabinet::Cabinet()
 {
 	number = 123;
 	otdelen = "Îòäåëåíèå ¹1";
 	area = 35;
+}
+
+Cabinet::Cabinet(int number, string otdelen, int area)
+{
+	this->number = number;
+	this->otdelen = otdelen;
+	this->area = area;
 }
 
 int Cabinet::get_num()

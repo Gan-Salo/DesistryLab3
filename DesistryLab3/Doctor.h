@@ -14,7 +14,8 @@ private:
 	Dolznost dolzn;		//Название должности
 	string kategory;	//Категория 
 public:
-	void init();
+	Doctor();
+	Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory);
 	string get_fio();
 	void vvod();
 	void print();

@@ -10,11 +10,11 @@ class Usluga
 		string title;	//Название услуги
 		int cost;	//Стоимость услуги
 	public:
-		void init();
-		string get_title();
+		Usluga();
+		Usluga(string title, int cost);
 		void vvod();
 		void print();
-
+		string get_title();
 };
 
 

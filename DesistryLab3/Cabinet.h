@@ -11,7 +11,8 @@ private:
 	string otdelen;	//Отделение, в которое входит кабинет
 	int area;		//Площадь кабинета
 public:	
-	void init();
+	Cabinet();
+	Cabinet(int number, string otdelen, int area);
 	int get_num();
 	void vvod();
 	void print();

@@ -1,12 +1,17 @@
 #include "Zapis.h"
 
-void Zapis::init()
+Zapis::Zapis()
 {
-	uslname.init();
-	dentist.init();
-	klient.init();
-	cabnum.init();
 	date = "12:30 28.12.2021";
+}
+
+Zapis::Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, string date)
+{
+	this->uslname = uslname;
+	this->dentist = dentist;
+	this->klient = klient;
+	this->cabnum = cabnum;
+	this->date = date;
 }
 
 void Zapis::vvod()

@@ -1,12 +1,20 @@
 #include "Doctor.h"
 
-void Doctor::init()
+Doctor::Doctor()
 {
 	fio = "ְגהווג ּ.ָ.";
 	age = 27;
-	phone = "+79134225430";
-	dolzn.init();
+	phone = "+79134225430";	
 	kategory = "ֲûסראÿ";
+}
+
+Doctor::Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory)
+{
+	this->fio = fio;
+	this->age = age;
+	this->phone = phone;
+	this->dolzn = dolzn;
+	this->kategory = kategory;
 }
 
 string Doctor::get_fio()
