@@ -11,8 +11,8 @@ private:
 	string otdelen;	//Отделение, в которое входит кабинет
 	int area;		//Площадь кабинета
 public:	
-	Cabinet();
-	Cabinet(int number, string otdelen, int area);
+	Cabinet();	//Конструктор без параметров
+	Cabinet(int number, string otdelen, int area);	//Конструктор с параметрами
 	int get_num();
 	void vvod();
 	void print();

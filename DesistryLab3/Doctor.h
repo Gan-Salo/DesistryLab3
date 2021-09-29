@@ -14,8 +14,8 @@ private:
 	Dolznost dolzn;		//Название должности
 	string kategory;	//Категория 
 public:
-	Doctor();
-	Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory);
+	Doctor();	//Конструктор без параметров
+	Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory);		//Конструктор с параметрами
 	string get_fio();
 	void vvod();
 	void print();

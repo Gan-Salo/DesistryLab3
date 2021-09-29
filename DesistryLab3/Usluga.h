@@ -10,8 +10,8 @@ class Usluga
 		string title;	//Название услуги
 		int cost;	//Стоимость услуги
 	public:
-		Usluga();
-		Usluga(string title, int cost);
+		Usluga();	//Конструктор без параметров
+		Usluga(string title, int cost);		//Конструктор с параметрами
 		void vvod();
 		void print();
 		string get_title();

@@ -11,9 +11,10 @@ private:
 	int age;		//Возраст
 	string phone;		//Номер телефона
 public:
-	void init();
-	string get_fio();
+	Patient();		//Конструктор без параметров
+	Patient(string fio, int age, string phone);		//Конструктор с параметрами
 	void vvod();
 	void print();
+	string get_fio();
 };
 

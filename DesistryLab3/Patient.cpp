@@ -1,10 +1,17 @@
 #include "Patient.h"
 
-void Patient::init()
+Patient::Patient()
 {	
 	fio = "Легостаев К.В.";
 	age= 35;
 	phone = "+79134567890";
+}
+
+Patient::Patient(string fio, int age, string phone)
+{
+	this->fio = fio;
+	this->age = age;
+	this->phone = phone;
 }
 
 string Patient::get_fio()
