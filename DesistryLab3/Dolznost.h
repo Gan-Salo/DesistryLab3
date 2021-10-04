@@ -15,6 +15,7 @@ public:
 	string get_title();
 	void vvod();
 	void print();
+	void change_pod();
 };
 
 

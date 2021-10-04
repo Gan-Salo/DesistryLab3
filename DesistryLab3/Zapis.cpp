@@ -41,3 +41,13 @@ void Zapis::print()
 	cout << date;
 	cout << " ||\n\n";
 }
+
+void Zapis::change_doc()
+{
+	this->uslname = uslname;
+	cout << "Введите ФИО нового врача: ";
+	dentist.vvod();
+	this->klient = klient;
+	this->cabnum = cabnum;
+	this->date = date;
+}

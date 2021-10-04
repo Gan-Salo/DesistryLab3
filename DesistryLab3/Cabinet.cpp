@@ -42,3 +42,11 @@ void Cabinet::print()
 	cout << area;
 	cout << " ||\n\n";
 }
+
+void Cabinet::change_num()
+{
+	cout << "¬ведите новый номер кабинета: ";
+	cin >> number;
+	this->otdelen = otdelen;
+	this->area = area;
+}

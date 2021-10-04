@@ -19,4 +19,5 @@ public:
 	string get_fio();
 	void vvod();
 	void print();
+	void change_age();
 };

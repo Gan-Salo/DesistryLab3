@@ -15,6 +15,7 @@ class Usluga
 		void vvod();
 		void print();
 		string get_title();
+		void change_cost();
 };
 
 

@@ -15,6 +15,7 @@ public:
 	Patient(string fio, int age, string phone);		//Конструктор с параметрами
 	void vvod();
 	void print();
+	void change_phone();
 	string get_fio();
 };
 

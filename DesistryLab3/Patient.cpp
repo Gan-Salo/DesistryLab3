@@ -42,3 +42,11 @@ void Patient::print()
 	cout << phone;
 	cout << " ||\n\n";
 }
+
+void Patient::change_phone()
+{
+	this->fio = fio;
+	this->age = age;
+	cout << "\nВведите номер телефона пациента: ";
+	cin >> phone;
+}

@@ -38,3 +38,11 @@ void Usluga::print()
 	cout << cost;
 	cout << " ||\n\n";
 }
+
+void Usluga::change_cost()
+{
+	this->title = title;
+	this->cost = cost;
+	cout << "\n¬ведите новую стоимость услуги: ";
+	cin >> cost;
+}

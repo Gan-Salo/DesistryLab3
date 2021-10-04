@@ -21,4 +21,6 @@ public:
 	Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, string date);		//Конструктор с параметрами
 	void vvod();
 	void print();
+	void change_doc();
+
 };

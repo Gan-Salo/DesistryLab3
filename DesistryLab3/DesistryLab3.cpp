@@ -43,5 +43,15 @@ int main()
     (*test_usl).print();
     test_usl[0].print();
 
+    Zapis test_zap1;
+    test_zap1.vvod();
+    test_zap1.print();
+    test_zap1.change_doc();
+    test_zap1.print();
+
+    Doctor test_doc1;
+    test_doc1.print();
+    test_doc1.change_age();
+    test_doc1.print();
 }
 

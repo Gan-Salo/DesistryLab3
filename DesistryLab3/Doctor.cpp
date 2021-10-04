@@ -52,3 +52,13 @@ void Doctor::print()
 	cout << kategory;
 	cout << " ||\n\n";
 }
+
+void Doctor::change_age()
+{
+	this->fio = fio;
+	cout << "¬ведите новый возраст: ";
+	cin >> age;
+	this->phone = phone;
+	this->dolzn = dolzn;
+	this->kategory = kategory;
+}

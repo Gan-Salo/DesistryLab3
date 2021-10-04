@@ -16,5 +16,5 @@ public:
 	int get_num();
 	void vvod();
 	void print();
-	
+	void change_num();
 };

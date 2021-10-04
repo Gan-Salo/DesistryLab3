@@ -39,3 +39,10 @@ void Dolznost::print()
 	cout << " ||\n\n";
 }
 
+void Dolznost::change_pod()
+{
+	this->title = title;
+	cout << "\nВведите новое подразделение: ";
+	cin >> podrazdel;
+	
+}
