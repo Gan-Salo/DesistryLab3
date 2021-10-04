@@ -43,6 +43,8 @@ int main()
     (*test_usl).print();
     test_usl[0].print();
 
+    /*Тестирование функций изменения*/
+
     Zapis test_zap1;
     test_zap1.vvod();
     test_zap1.print();

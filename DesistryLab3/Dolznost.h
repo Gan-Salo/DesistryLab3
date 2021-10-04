@@ -13,9 +13,9 @@ public:
 	Dolznost();	//Конструктор без параметров
 	Dolznost(string title, string podrazdel);	//Конструктор с параметрами
 	string get_title();
-	void vvod();
-	void print();
-	void change_pod();
+	void vvod();	//Функция ввода
+	void print();	//Функция вывода
+	void change_pod();	//Функция изменения подразделения
 };
 
 

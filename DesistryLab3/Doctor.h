@@ -17,7 +17,7 @@ public:
 	Doctor();	//Конструктор без параметров
 	Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory);		//Конструктор с параметрами
 	string get_fio();
-	void vvod();
-	void print();
-	void change_age();
+	void vvod();	//Функция ввода
+	void print();	//Функция вывода
+	void change_age();	//Функция изменения возраста доктора
 };

@@ -19,8 +19,8 @@ private:
 public:
 	Zapis();	//Конструктор без параметров
 	Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, string date);		//Конструктор с параметрами
-	void vvod();
-	void print();
-	void change_doc();
+	void vvod();	//Функция ввода
+	void print();	//Функция вывода
+	void change_doc();	//Функция изменения 
 
 };

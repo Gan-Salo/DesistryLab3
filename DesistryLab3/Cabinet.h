@@ -14,7 +14,7 @@ public:
 	Cabinet();	//Конструктор без параметров
 	Cabinet(int number, string otdelen, int area);	//Конструктор с параметрами
 	int get_num();
-	void vvod();
-	void print();
-	void change_num();
+	void vvod();	//Функция ввода
+	void print();	//Функция вывода
+	void change_num();	//Функция изменения номера кабинета
 };
