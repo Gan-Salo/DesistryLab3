@@ -12,10 +12,10 @@ class Usluga
 	public:
 		Usluga();	//Конструктор без параметров
 		Usluga(string title, int cost);		//Конструктор с параметрами
-		void vvod();	//Функция ввода
-		void print();	//Функция вывода
-		string get_title();
-		void change_cost();	//Функция изменения стоимости услуги
+		void vvod();	//Прототип функции ввода
+		void print();	//Прототип функции вывода
+		string get_title();	//Прототип функции для получения названия услуги
+		void change_cost();	//Прототип функции изменения стоимости услуги
 };
 
 

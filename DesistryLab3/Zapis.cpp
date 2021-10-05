@@ -1,10 +1,12 @@
 #include "Zapis.h"
 
+/*Конструктор без параметров*/
 Zapis::Zapis()
 {
 	date = "12:30 28.12.2021";
 }
 
+/*Конструктор с параметрами*/
 Zapis::Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, string date)
 {
 	this->uslname = uslname;
@@ -14,6 +16,7 @@ Zapis::Zapis(Usluga uslname, Doctor dentist, Patient klient, Cabinet cabnum, str
 	this->date = date;
 }
 
+/*Функция ввода*/
 void Zapis::vvod()
 {
 	cout << "_Ввод записи_\n";
@@ -26,6 +29,7 @@ void Zapis::vvod()
 	cout << "\n\n";
 }
 
+/*Функция вывода*/
 void Zapis::print()
 {
 	cout << "_Запись на прием_\n";
@@ -42,6 +46,7 @@ void Zapis::print()
 	cout << " ||\n\n";
 }
 
+/*Функция изменения принимающего доктора*/
 void Zapis::change_doc()
 {
 	this->uslname = uslname;

@@ -1,5 +1,6 @@
 #include "Cabinet.h"
 
+/*Конструктор без параметров*/
 Cabinet::Cabinet()
 {
 	number = 123;
@@ -7,6 +8,7 @@ Cabinet::Cabinet()
 	area = 35;
 }
 
+/*Конструктор с параметрами*/
 Cabinet::Cabinet(int number, string otdelen, int area)
 {
 	this->number = number;
@@ -14,11 +16,13 @@ Cabinet::Cabinet(int number, string otdelen, int area)
 	this->area = area;
 }
 
+/*Функция для получения номера кабинета*/
 int Cabinet::get_num()
 {
 	return number;
 }
 
+/*Функция ввода*/
 void Cabinet::vvod()
 {
 	cout << "_Ввод кабинета_\n";
@@ -31,6 +35,7 @@ void Cabinet::vvod()
 	cout << "\n\n";
 }
 
+/*Функция вывода*/
 void Cabinet::print()
 {
 	cout << "_Кабинет_\n";
@@ -43,6 +48,7 @@ void Cabinet::print()
 	cout << " ||\n\n";
 }
 
+/*Функция изменения номера кабинета*/
 void Cabinet::change_num()
 {
 	cout << "Введите новый номер кабинета: ";

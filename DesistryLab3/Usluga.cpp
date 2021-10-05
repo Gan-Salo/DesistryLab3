@@ -1,5 +1,6 @@
 #include "Usluga.h"
 
+/*Конструктор без параметров*/
 Usluga::Usluga()
 {
 	title = "Чистка зубов";
@@ -7,17 +8,20 @@ Usluga::Usluga()
 	
 }
 
+/*Конструктор с параметрами*/
 Usluga::Usluga(string title, int cost)
 {
 	this->title = title;
 	this->cost = cost;
 }
 
+/*Функция для получения названия услуги*/
 string Usluga::get_title()
 {
 	return title;
 }
 
+/*Функция ввода*/
 void Usluga::vvod()
 {
 	cout << "_Ввод услуги_\n";
@@ -29,6 +33,7 @@ void Usluga::vvod()
 	
 }
 
+/*Функция вывода*/
 void Usluga::print()
 {
 	cout << "_Услуга_\n";
@@ -39,6 +44,7 @@ void Usluga::print()
 	cout << " ||\n\n";
 }
 
+/*Функция изменения стоимости услуги*/
 void Usluga::change_cost()
 {
 	this->title = title;

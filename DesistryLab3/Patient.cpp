@@ -1,5 +1,6 @@
 #include "Patient.h"
 
+/*Конструктор без параметров*/
 Patient::Patient()
 {	
 	fio = "Легостаев К.В.";
@@ -7,6 +8,7 @@ Patient::Patient()
 	phone = "+79134567890";
 }
 
+/*Конструктор с параметрами*/
 Patient::Patient(string fio, int age, string phone)
 {
 	this->fio = fio;
@@ -14,11 +16,13 @@ Patient::Patient(string fio, int age, string phone)
 	this->phone = phone;
 }
 
+/*Функция для получения ФИО пациента*/
 string Patient::get_fio()
 {
 	return fio;
 }
 
+/*Функция ввода*/
 void Patient::vvod()
 {
 	cout << "_Ввод пациента_\n";
@@ -31,6 +35,7 @@ void Patient::vvod()
 	cout << "\n\n";
 }
 
+/*Функция вывода*/
 void Patient::print()
 {
 	cout << "_Пациент_\n";
@@ -43,6 +48,7 @@ void Patient::print()
 	cout << " ||\n\n";
 }
 
+/*Функция изменения номера телефона*/
 void Patient::change_phone()
 {
 	this->fio = fio;

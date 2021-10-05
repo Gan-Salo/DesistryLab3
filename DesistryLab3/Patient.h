@@ -13,9 +13,9 @@ private:
 public:
 	Patient();		//Конструктор без параметров
 	Patient(string fio, int age, string phone);		//Конструктор с параметрами
-	void vvod();	//Функция ввода
-	void print();	//Функция вывода
-	void change_phone();	//Функция изменения номера телефона
-	string get_fio();
+	void vvod();	//Прототип функции ввода
+	void print();	//Прототип функции вывода
+	void change_phone();	//Прототип функции изменения номера телефона
+	string get_fio();	//Прототип функции для получения фамилии пациента
 };
 

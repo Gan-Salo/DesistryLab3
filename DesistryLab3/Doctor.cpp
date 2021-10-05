@@ -1,5 +1,6 @@
 #include "Doctor.h"
 
+/*Конструктор без параметров*/
 Doctor::Doctor()
 {
 	fio = "Авдеев М.И.";
@@ -8,6 +9,7 @@ Doctor::Doctor()
 	kategory = "Высшая";
 }
 
+/*Конструктор с параметрами*/
 Doctor::Doctor(string fio, int age, string phone, Dolznost dolzn, string kategory)
 {
 	this->fio = fio;
@@ -17,11 +19,13 @@ Doctor::Doctor(string fio, int age, string phone, Dolznost dolzn, string kategor
 	this->kategory = kategory;
 }
 
+/*Функция для получения ФИО доктора*/
 string Doctor::get_fio()
 {
 	return fio;
 }
 
+/*Функция ввода*/
 void Doctor::vvod()
 {
 	cout << "_Ввод доктора_\n";
@@ -37,6 +41,7 @@ void Doctor::vvod()
 	cout << "\n\n";
 }
 
+/*Функция вывода*/
 void Doctor::print()
 {
 	cout << "_Врач_\n";
@@ -53,6 +58,7 @@ void Doctor::print()
 	cout << " ||\n\n";
 }
 
+/*Функция изменения возраста доктора*/
 void Doctor::change_age()
 {
 	this->fio = fio;

@@ -12,10 +12,10 @@ private:
 public:
 	Dolznost();	//Конструктор без параметров
 	Dolznost(string title, string podrazdel);	//Конструктор с параметрами
-	string get_title();
-	void vvod();	//Функция ввода
-	void print();	//Функция вывода
-	void change_pod();	//Функция изменения подразделения
+	string get_title();	//Прототип функции для получения названия должности
+	void vvod();	//Прототип функции ввода
+	void print();	//Прототип функции вывода
+	void change_pod();	//Прототип функции изменения подразделения
 };
 
 
