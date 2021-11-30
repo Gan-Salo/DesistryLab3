@@ -47,7 +47,7 @@ void Zapis::print()
 	cout << " || ФИО пациента: ";
 	cout << (*klient).get_fio();
 	cout << " || Номер кабинета: ";
-	cout << (*cabnum).get_num();
+	//cout << (*cabnum).get_num();
 	cout << " || Дата приема: ";
 	cout << date;
 	cout << " ||\n\n";

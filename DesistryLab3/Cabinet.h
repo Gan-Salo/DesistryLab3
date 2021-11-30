@@ -13,7 +13,8 @@ private:
 public:	
 	Cabinet();	//Конструктор без параметров
 	Cabinet(int number, string otdelen, int area);	//Конструктор с параметрами
-	int get_num();
+	int get_num(int& ret_num);
+	int get_area(int* ret_area);	//Функция возврата номера кабинета
 	void vvod();	//Прототип функции ввода
 	void print();	//Прототип функции вывода
 	void change_num();	//Прототип функции изменения номера кабинета

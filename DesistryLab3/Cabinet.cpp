@@ -17,9 +17,17 @@ Cabinet::Cabinet(int number, string otdelen, int area)
 }
 
 /*Функция для получения номера кабинета*/
-int Cabinet::get_num()
+int Cabinet::get_num(int& ret_num)
 {
-	return number;
+	ret_num += this->number;
+	return ret_num;
+}
+
+/*Функция для получения номера кабинета*/
+int Cabinet::get_area(int* ret_area)
+{
+	(*ret_area) += this->area;
+	return (*ret_area);
 }
 
 /*Функция ввода*/

@@ -19,13 +19,20 @@ int main()
 
     test_doc1.print();
 
-    Usluga test_usl;
-    Patient test_pat;
-    Cabinet test_cab;
-    Zapis test_zap1, test_zap2(test_usl, test_doc1, test_pat, test_cab, "22:00 21.11.2022");
-    test_zap1.print();
-    test_zap2.print();
+   /* Usluga test_usl;
+    Patient test_pat;*/
     
+    /*Zapis test_zap1, test_zap2(test_usl, test_doc1, test_pat, test_cab, "22:00 21.11.2022");
+    test_zap1.print();
+    test_zap2.print();*/
+    
+    int numb = 0;
+    int area = 0;
 
+    Cabinet test_cab(211, "wdw", 22);
+    test_cab.get_num(numb);
+    cout << "\nВозврат номера кабинета через ссылку: " << numb;
+    test_cab.get_area(&area);
+    cout << "\nВозврат площади кабинета через указатель: " << area;
 }
 
