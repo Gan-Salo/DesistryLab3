@@ -29,10 +29,16 @@ int main()
     int numb = 0;
     int area = 0;
 
-    Cabinet test_cab(211, "wdw", 22);
+    Cabinet test_cab(211, "wdw", 22), test_cab2(201, "wqwe", 35);
     test_cab.get_num(numb);
     cout << "\nВозврат номера кабинета через ссылку: " << numb;
     test_cab.get_area(&area);
-    cout << "\nВозврат площади кабинета через указатель: " << area;
+    cout << "\nВозврат площади кабинета через указатель: " << area << "\n";
+
+    test_cab = test_cab + test_cab2;
+    test_cab.print();
+    Usluga testuls1("1", 1);
+    cout << testuls1;
+
 }
 

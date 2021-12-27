@@ -4,8 +4,7 @@
 Usluga::Usluga()
 {
 	title = "Чистка зубов";
-	cost = 400;
-	
+	cost = 400;	
 }
 
 /*Конструктор с параметрами*/
@@ -51,4 +50,12 @@ void Usluga::change_cost()
 	this->cost = cost;
 	cout << "\nВведите новую стоимость услуги: ";
 	cin >> cost;
+}
+
+ostream& operator<<(ostream& out, Usluga& usl)
+{
+	//out << usl.title << ' ' << usl.cost;
+	out << "_Услуга_\n";
+	out << "Название услуги: " << usl.title << " | Стоимость услуги: " << usl.cost << " |\n\n";
+	return out;
 }
