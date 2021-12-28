@@ -6,6 +6,7 @@ Patient::Patient()
 	fio = "Легостаев К.В.";
 	age= 35;
 	phone = "+79134567890";
+	counter++;
 }
 
 /*Конструктор с параметрами*/
@@ -14,6 +15,7 @@ Patient::Patient(string fio, int age, string phone)
 	this->fio = fio;
 	this->age = age;
 	this->phone = phone;
+	counter++;
 }
 
 /*Функция для получения ФИО пациента*/
@@ -56,3 +58,17 @@ void Patient::change_phone()
 	cout << "\nВведите номер телефона пациента: ";
 	cin >> phone;
 }
+
+/*Функция установления определённого количества пациентов*/
+void Patient::set_counter(int kolvo)
+{
+	counter = kolvo;
+}
+
+/*Функция вывода количества пациентов*/
+void Patient::get_counter()
+{
+	cout << "\nКоличество пациентов: " << counter;
+};
+
+int Patient::counter = 0;
