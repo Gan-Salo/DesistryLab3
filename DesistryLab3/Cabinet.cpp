@@ -37,20 +37,53 @@ int Cabinet::get_area(int* ret_area)
 /*Функция ввода*/
 void Cabinet::vvod()
 {
-	cout << "_Ввод кабинета_\n";
-	cout << "Введите номер кабинета: ";
-	cin >> number;
+	do
+	{
+		cout << "Введите номер кабинета: ";
+		try
+		{
+			cin >> number;
+			
+			if (number < 0)
+			{
+				throw "Данное значение не подходит для описания номера кабинета.\n";
+			}
+		}
+		catch (const char* e)
+		{
+			cerr << "Error: " << e;
+			number = -1;
+		}
+
+	} while (number == -1);
+
 	cout << "\nВведите отделение: ";
 	cin >> otdelen;
-	cout << "\nВведите площадь кабинета: ";
-	cin >> area;
+
+	do
+	{	
+		try
+		{	
+			cout << "\nВведите площадь кабинета: ";
+			cin >> area;
+			if (area < 0)
+			{
+				throw "Данное значение не подходит для описания номера кабинета.\n";
+			}
+		}
+		catch (const char* e)
+		{
+			cerr << "Error: " << e;
+			area = -1;
+		}
+
+	} while (area == -1);
 	cout << "\n\n";
 }
 
 /*Функция вывода*/
 void Cabinet::print()
 {
-	cout << "_Кабинет_\n";
 	cout << "Номер: ";
 	cout << number;
 	cout << " || Отделение: ";
