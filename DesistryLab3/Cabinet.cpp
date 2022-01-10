@@ -3,9 +3,7 @@
 /*Конструктор без параметров*/
 Cabinet::Cabinet()
 {
-	number = 123;
-	otdelen = "Отделение №1";
-	area = 35;
+
 }
 
 /*Конструктор с параметрами*/
@@ -23,7 +21,7 @@ int Cabinet::get_num(int& ret_num)
 	return ret_num;
 }
 
-/*Функция для получения номера кабинета*/
+/*Функция для получения площади кабинета*/
 int Cabinet::get_area(int* ret_area)
 {
 	(*ret_area) += this->area;
@@ -61,6 +59,4 @@ void Cabinet::change_num()
 {
 	cout << "Введите новый номер кабинета: ";
 	cin >> number;
-	this->otdelen = otdelen;
-	this->area = area;
 }

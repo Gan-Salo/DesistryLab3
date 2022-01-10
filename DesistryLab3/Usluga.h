@@ -11,19 +11,26 @@ class Usluga
 		int cost;	//Стоимость услуги
 	public:
 		Usluga();	//Конструктор без параметров
+		Usluga(string title); //Конструктор с одним параметром
 		Usluga(string title, int cost);		//Конструктор с параметрами
 		
+		Usluga& operator +(Usluga& another)	//Оператор сложения
+		{
+			cost = cost + another.cost;			
+			return *this;
+		}
+
 		Usluga operator ++()	//Префиксный оператор
 		{
-			cost += cost;
+			cost++;
 			return *this;
 		}
 		
-		Usluga operator ++(int cost)	//Постфиксный оператор
+		Usluga operator ++(int s)	//Постфиксный оператор
 		{
-			Usluga title = *this;
-			cost += cost;
-			return title;
+			Usluga temp = *this;
+			cost++;
+			return temp;
 		}
 		
 		void vvod();	//Прототип функции ввода

@@ -68,7 +68,8 @@ void Patient::set_counter(int kolvo)
 /*Функция вывода количества пациентов*/
 void Patient::get_counter()
 {
-	cout << "\nКоличество пациентов: " << counter;
+	cout << counter;
 };
 
+/*Начальное количество пациентов равно нулю*/
 int Patient::counter = 0;

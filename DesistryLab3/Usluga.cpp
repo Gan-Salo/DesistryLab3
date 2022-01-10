@@ -3,8 +3,13 @@
 /*Конструктор без параметров*/
 Usluga::Usluga()
 {
-	title = "Чистка зубов";
-	cost = 400;	
+
+}
+
+/*Конструктор с одним параметром*/
+Usluga::Usluga(string title) 
+{
+	this->title = title;
 }
 
 /*Конструктор с параметрами*/
@@ -35,7 +40,6 @@ void Usluga::vvod()
 /*Функция вывода*/
 void Usluga::print()
 {
-	cout << "_Услуга_\n";
 	cout << "Название услуги: ";
 	cout << title;
 	cout << " || Стоимость услуги: ";
@@ -54,8 +58,6 @@ void Usluga::change_cost()
 
 ostream& operator<<(ostream& out, Usluga& usl)
 {
-	//out << usl.title << ' ' << usl.cost;
-	out << "_Услуга_\n";
 	out << "Название услуги: " << usl.title << " | Стоимость услуги: " << usl.cost << " |\n\n";
 	return out;
 }

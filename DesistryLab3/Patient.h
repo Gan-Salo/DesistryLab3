@@ -6,11 +6,11 @@ using namespace std;
 #pragma once
 class Patient
 {
-private:
-	static int counter;
+private:	
 	string fio;		//ФИО
 	int age;		//Возраст
 	string phone;		//Номер телефона
+	static int counter;
 public:
 	
 	Patient();		//Конструктор без параметров
@@ -20,7 +20,7 @@ public:
 	void change_phone();	//Прототип функции изменения номера телефона
 	string get_fio();	//Прототип функции для получения фамилии пациента
 	static void set_counter(int kolvo);
-	void get_counter(); //Прототип функции вывода количества пациентов
+	static void get_counter(); //Прототип функции вывода количества пациентов
 	
 };
 

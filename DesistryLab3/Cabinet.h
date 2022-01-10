@@ -15,14 +15,6 @@ public:
 	Cabinet(int number, string otdelen, int area);	//Конструктор с параметрами
 	int get_num(int& ret_num);
 	int get_area(int* ret_area);	//Функция возврата номера кабинета
-	
-	Cabinet& operator +(Cabinet& another)
-	{
-		number = number + another.number;
-		area = area + another.area;
-		return *this;
-	}
-
 	void vvod();	//Прототип функции ввода
 	void print();	//Прототип функции вывода
 	void change_num();	//Прототип функции изменения номера кабинета
