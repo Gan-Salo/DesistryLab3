@@ -38,7 +38,7 @@ int main()
     do
     {
         system("CLS");       
-        cout << "1) Возврат значений методов\n2) Перегрузка операторов\n3) Дружественная функция\n4) Статический метод\nESC - выход";
+        cout << "1) Возврат значений методов\n2) Перегрузка операторов\n3) Дружественная функция\n4) Статический метод\n5) Мелкое и глубокое копирования\n6) Одномерный массив\n7) Двумерный массив\nESC - выход";
         mainmenu = _getch();
         switch (mainmenu)
         {
@@ -71,7 +71,7 @@ int main()
                      system("CLS");
                      Usluga usl1("fisrt", 2100);
                      Usluga usl2("second", 1500);
-                     Usluga usl3("third");
+                     Usluga usl3(0);
                      cout << "\nПервая услуга: ";
                      usl1.print();
                      cout << "\nВторая услуга: ";
@@ -87,7 +87,7 @@ int main()
                      system("CLS");
                      cout << "\nПостфиксный оператор";
                      Usluga usl1("first", 2100);
-                     Usluga usl2("second");
+                     Usluga usl2(0);
                      cout << "\nПервая услуга до: ";
                      usl1.print();
                      usl2 = usl1++;
@@ -102,7 +102,7 @@ int main()
                  {
                      system("CLS");
                      Usluga usl1("first", 2100);
-                     Usluga usl2("second");
+                     Usluga usl2(0);
                      cout << "\nПрефиксный оператор";
                      cout << "\nПервая услуга до: ";
                      cout << usl1;
@@ -152,6 +152,79 @@ int main()
                 break;
             }
 
+            case 53:
+            {                
+                system("CLS");
+                Usluga* usl = new Usluga(222);
+                cout << "Демонстрация работы дружественной функции - оператора вывода\n";               
+                Usluga& testusl1 = *usl;
+                Usluga* testusl2 = new Usluga(*usl);
+                cout << "Изначальный вариант:\n";
+                cout << *usl;
+                testusl1.change_cost();
+                
+                cout << "Мелкое (поверхностное) копирование:\n";
+                cout << testusl1;
+
+                cout << "Глубокое копирование:\n";
+                cout << *testusl2;
+                _getch();
+                break;
+            }
+
+            case 54:
+            {
+                system("CLS");                
+                int n ;
+                do
+                {
+                    cout << "Введите количество пациентов для создания массива: ";
+                    cin >> n ;
+                    if (n < 0)
+                    {
+                        cout << "Введено неверное значение.";
+                    }
+                } while (n < 0);               
+                Patient* pat = new Patient[n];
+
+                /*Ввод и вывод массива*/
+                for (int i = 0; i < n; i++)
+                {
+                    pat[i] = *new Patient("Тестовый пациент ");
+                    pat[i].print();
+                }
+              
+                _getch();
+                break;
+            }
+
+            case 55:
+            {
+                system("CLS");
+                
+                Patient pat[2][2];
+
+                /*Ввод и вывод массива*/
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        pat[i][j] = *new Patient();
+                        pat[i][j].vvod();                       
+                    }
+                }
+
+                /*Вывод массива*/
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        pat[i][j].print();
+                    }
+                }               
+                _getch();
+                break;
+            }
 
         }
 

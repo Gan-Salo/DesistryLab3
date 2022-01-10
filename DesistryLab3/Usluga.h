@@ -11,7 +11,7 @@ class Usluga
 		int cost;	//Стоимость услуги
 	public:
 		Usluga();	//Конструктор без параметров
-		Usluga(string title); //Конструктор с одним параметром
+		Usluga(int cost); //Конструктор с одним параметром
 		Usluga(string title, int cost);		//Конструктор с параметрами
 		
 		Usluga& operator +(Usluga& another)	//Оператор сложения
@@ -33,10 +33,17 @@ class Usluga
 			return temp;
 		}
 		
+		Usluga& operator=(const Usluga & temp)	//Оператор присваивания
+		{
+			gl_coping(temp);
+			return *this;
+		}
+
 		void vvod();	//Прототип функции ввода
 		void print();	//Прототип функции вывода
 		string get_title();	//Прототип функции для получения названия услуги
 		void change_cost();	//Прототип функции изменения стоимости услуги
+		void gl_coping(const Usluga& temp);
 		friend ostream& operator<<(ostream& out, Usluga& usl); //Дружественная функция - перегрузка оператора вывода
 };
 

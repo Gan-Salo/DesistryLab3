@@ -6,6 +6,12 @@ Cabinet::Cabinet()
 
 }
 
+/*Конструктор с одним параметром*/
+Cabinet::Cabinet(int number)
+{
+	this->number = number;
+}
+
 /*Конструктор с параметрами*/
 Cabinet::Cabinet(int number, string otdelen, int area)
 {

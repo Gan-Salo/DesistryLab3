@@ -3,8 +3,13 @@
 /*Конструктор без параметров*/
 Dolznost::Dolznost()
 {
-	title = "Терапевт";
-	podrazdel = "Мед. персонал";
+
+}
+
+/*Конструктор с одним параметром*/
+Dolznost::Dolznost(string title)
+{
+	this->title = title;
 }
 
 /*Конструктор с параметрами*/

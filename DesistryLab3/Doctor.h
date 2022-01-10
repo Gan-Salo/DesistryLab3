@@ -15,7 +15,8 @@ private:
 	string kategory;	//Категория 
 public:
 	Doctor();	//Конструктор без параметров
-	Doctor(string fio, int age, string phone, Dolznost &dolzn, string kategory);		//Конструктор с параметрами
+	Doctor(string fio); //Конструктор с одним параметром
+	Doctor(string fio, int age, string phone, Dolznost &dolzn, string kategory);	//Конструктор с параметрами
 	string get_fio();
 	void vvod();	//Прототип функции ввода
 	void print();	//Прототип функции вывода

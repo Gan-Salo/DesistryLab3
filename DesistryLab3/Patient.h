@@ -14,6 +14,7 @@ private:
 public:
 	
 	Patient();		//Конструктор без параметров
+	Patient(string fio); //Конструктор с одним параметром
 	Patient(string fio, int age, string phone);		//Конструктор с параметрами
 	void vvod();	//Прототип функции ввода
 	void print();	//Прототип функции вывода

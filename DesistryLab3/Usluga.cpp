@@ -7,9 +7,9 @@ Usluga::Usluga()
 }
 
 /*Конструктор с одним параметром*/
-Usluga::Usluga(string title) 
+Usluga::Usluga(int cost)
 {
-	this->title = title;
+	this->cost = cost;
 }
 
 /*Конструктор с параметрами*/
@@ -50,14 +50,17 @@ void Usluga::print()
 /*Функция изменения стоимости услуги*/
 void Usluga::change_cost()
 {
-	this->title = title;
-	this->cost = cost;
-	cout << "\nВведите новую стоимость услуги: ";
-	cin >> cost;
+	this->cost = this->cost - 100;
 }
 
 ostream& operator<<(ostream& out, Usluga& usl)
 {
 	out << "Название услуги: " << usl.title << " | Стоимость услуги: " << usl.cost << " |\n\n";
 	return out;
+}
+
+
+void Usluga::gl_coping(const Usluga& temp)
+{
+	cost = temp.cost;
 }

@@ -3,9 +3,13 @@
 /*Конструктор без параметров*/
 Patient::Patient()
 {	
-	fio = "Легостаев К.В.";
-	age= 35;
-	phone = "+79134567890";
+	counter++;
+}
+
+/*Конструктор с одним параметром*/
+Patient::Patient(string fio)
+{
+	this->fio = fio;
 	counter++;
 }
 
@@ -17,6 +21,7 @@ Patient::Patient(string fio, int age, string phone)
 	this->phone = phone;
 	counter++;
 }
+
 
 /*Функция для получения ФИО пациента*/
 string Patient::get_fio()

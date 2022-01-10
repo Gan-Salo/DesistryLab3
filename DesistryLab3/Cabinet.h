@@ -12,6 +12,7 @@ private:
 	int area;		//Площадь кабинета
 public:	
 	Cabinet();	//Конструктор без параметров
+	Cabinet(int number); //Конструктор с одним параметром
 	Cabinet(int number, string otdelen, int area);	//Конструктор с параметрами
 	int get_num(int& ret_num);
 	int get_area(int* ret_area);	//Функция возврата номера кабинета
