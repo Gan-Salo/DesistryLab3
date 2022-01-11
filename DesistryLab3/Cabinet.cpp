@@ -44,7 +44,7 @@ void Cabinet::vvod()
 		{
 			cin >> number;
 			
-			if (number < 0)
+			if (number <= 0)
 			{
 				throw "Данное значение не подходит для описания номера кабинета.\n";
 			}
@@ -66,7 +66,7 @@ void Cabinet::vvod()
 		{	
 			cout << "\nВведите площадь кабинета: ";
 			cin >> area;
-			if (area < 0)
+			if (area <= 0)
 			{
 				throw "Данное значение не подходит для описания номера кабинета.\n";
 			}

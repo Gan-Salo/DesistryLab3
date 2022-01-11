@@ -156,7 +156,7 @@ int main()
             {                
                 system("CLS");
                 Usluga* usl = new Usluga(222);
-                cout << "Демонстрация работы дружественной функции - оператора вывода\n";               
+                cout << "Демонстрация различий мелкого и глубокого копирования\n";               
                 Usluga& testusl1 = *usl;
                 Usluga* testusl2 = new Usluga(*usl);
                 cout << "Изначальный вариант:\n";
@@ -238,5 +238,14 @@ int main()
         }
 
     } while (mainmenu != 27);
+
+    cout << "\n";
+    Usluga usl1("Xewq", 222);
+    Usluga usl2(123);
+    Usluga usl3;
+
+    cout << usl1;
+    cout << usl2;
+    cout << usl3;
 }
 

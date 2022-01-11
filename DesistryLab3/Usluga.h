@@ -43,7 +43,7 @@ class Usluga
 		void print();	//Прототип функции вывода
 		string get_title();	//Прототип функции для получения названия услуги
 		void change_cost();	//Прототип функции изменения стоимости услуги
-		void gl_coping(const Usluga& temp);
+		void gl_coping(const Usluga& temp); //Прототип функции копирования
 		friend ostream& operator<<(ostream& out, Usluga& usl); //Дружественная функция - перегрузка оператора вывода
 };
 

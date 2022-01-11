@@ -3,7 +3,7 @@
 /*Конструктор без параметров*/
 Usluga::Usluga()
 {
-
+	this->cost = 0;
 }
 
 /*Конструктор с одним параметром*/
@@ -59,7 +59,7 @@ ostream& operator<<(ostream& out, Usluga& usl)
 	return out;
 }
 
-
+/*Функция копирования*/
 void Usluga::gl_coping(const Usluga& temp)
 {
 	cost = temp.cost;

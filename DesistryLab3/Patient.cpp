@@ -3,6 +3,7 @@
 /*Конструктор без параметров*/
 Patient::Patient()
 {	
+	this->age = 0;
 	counter++;
 }
 
@@ -10,6 +11,7 @@ Patient::Patient()
 Patient::Patient(string fio)
 {
 	this->fio = fio;
+	this->age = 0;
 	counter++;
 }
 
@@ -21,7 +23,6 @@ Patient::Patient(string fio, int age, string phone)
 	this->phone = phone;
 	counter++;
 }
-
 
 /*Функция для получения ФИО пациента*/
 string Patient::get_fio()
@@ -40,6 +41,7 @@ void Patient::vvod()
 	cout << "\nВведите номер телефона пациента: ";
 	cin >> phone;
 	cout << "\n\n";
+	counter++;
 }
 
 /*Функция вывода*/

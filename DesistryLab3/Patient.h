@@ -10,7 +10,7 @@ private:
 	string fio;		//ФИО
 	int age;		//Возраст
 	string phone;		//Номер телефона
-	static int counter;
+	static int counter; //Количество пациентов
 public:
 	
 	Patient();		//Конструктор без параметров
