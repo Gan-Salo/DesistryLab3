@@ -139,18 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cabin.cpp" />
     <ClCompile Include="Cabinet.cpp" />
     <ClCompile Include="DesistryLab3.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="Dolznost.cpp" />
+    <ClCompile Include="Laborant.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Usluga.cpp" />
     <ClCompile Include="Zapis.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cabin.h" />
     <ClInclude Include="Cabinet.h" />
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="Dolznost.h" />
+    <ClInclude Include="Laborant.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Usluga.h" />
     <ClInclude Include="Zapis.h" />

@@ -5,8 +5,27 @@
 #include "Doctor.h"
 #include "Patient.h"
 #include "Cabinet.h"
+#include "Laborant.h"
 #include "Zapis.h"
+#include "Cabin.h"
 #include <conio.h>
+#include <vector>
+#include <algorithm>
+
+bool correct_order(Doctor doc1, Doctor doc2)
+{
+    bool result = false;
+    if ((doc1.get_fio())[0] <= (doc2.get_fio())[0])
+        result = true;
+    return result;
+}
+
+char s;
+
+bool search_book(Doctor doc1)
+{
+    return (doc1.get_fio())[0] == s;
+}
 
 int main()
 {
@@ -38,7 +57,7 @@ int main()
     do
     {
         system("CLS");       
-        cout << "1) Возврат значений методов\n2) Перегрузка операторов\n3) Дружественная функция\n4) Статический метод\n5) Мелкое и глубокое копирования\n6) Одномерный массив\n7) Двумерный массив\n8) Защиты и исключения\nESC - выход";
+        cout << "1) Возврат значений методов\n2) Перегрузка операторов\n3) Шаблон класса\n 4) Контейнеры, поиск и сортировка\nESC - выход";
         mainmenu = _getch();
         switch (mainmenu)
         {
@@ -123,115 +142,67 @@ int main()
 
             case 51:
             {
+                /*Шаблон класса*/
                 system("CLS");
-                cout << "Демонстрация работы дружественной функции - оператора вывода\n";
-                Usluga testusl("saqx", 222);  
-                cout << "Вывод через обычный метод класса\n";
-                testusl.print();
-                cout << "Вывод через дружественную функцию\n";
-                cout << testusl;
+                Cabin<string> cab1("dw232");
+                Cabin<int> cab2(123);
+                cab1.print();
+                cab2.print();
                 _getch();
                 break;
             }
 
             case 52:
             {
+                /*Сортировка*/
                 system("CLS");
-                cout << "Количество пациентов до добавления: ";
-                Patient::get_counter();
-                Patient testpat;
-                cout << "\nКоличество пациентов после добавления одного объекта: ";
-                Patient::get_counter();
-                cout << "\nКоличество пациентов после установки количества пациентов на 3: ";
-                Patient::set_counter(3);
-                Patient::get_counter();
-                Patient testpat2;
-                cout << "\nКоличество пациентов после добавления ещё одного объекта: ";
-                Patient::get_counter();
-                _getch();
-                break;
-            }
-
-            case 53:
-            {                
-                system("CLS");
-                Usluga* usl = new Usluga(222);
-                cout << "Демонстрация различий мелкого и глубокого копирования\n";               
-                Usluga& testusl1 = *usl;
-                Usluga* testusl2 = new Usluga(*usl);
-                cout << "Изначальный вариант:\n";
-                cout << *usl;
-                testusl1.change_cost();
+                Dolznost dolz("Стоматолог", "Стандарт");
+                vector<Doctor> docs;
+                vector<Doctor>::iterator dc;
                 
-                cout << "Мелкое (поверхностное) копирование:\n";
-                cout << testusl1;
+                Doctor* doc = new Doctor("Овсянников Г.В.", 19, "+213091829038", dolz, "Высшая");
+                Doctor* doc2 = new Doctor("Арапв", 24, "+83742384293", dolz, "Высшая");
+                Laborant* lab1 = new Laborant("Дее", 20, "434234234", dolz, "Обычная", 5);
+                
+                docs.clear();
+                docs.push_back(*doc);
+                docs.push_back(*doc2);
+                docs.push_back(*lab1);
 
-                cout << "Глубокое копирование:\n";
-                cout << *testusl2;
-                _getch();
-                break;
-            }
-
-            case 54:
-            {
-                system("CLS");                
-                int n ;
-                do
+                cout << "Контейнер до сортировки фамилий по алфавиту:\n\n";
+                for (dc = docs.begin(); dc != docs.end(); dc++)
                 {
-                    cout << "Введите количество пациентов для создания массива: ";
-                    cin >> n ;
-                    if (n < 0)
-                    {
-                        cout << "Введено неверное значение.";
-                    }
-                } while (n < 0);               
-                Patient* pat = new Patient[n];
-
-                /*Ввод и вывод массива*/
-                for (int i = 0; i < n; i++)
-                {
-                    pat[i] = *new Patient("Тестовый пациент ");
-                    pat[i].print();
+                    (*dc).print();
+                    cout << "\n";
                 }
-              
-                _getch();
-                break;
-            }
 
-            case 55:
-            {
-                system("CLS");
-                
-                Patient pat[2][2];
+                sort(docs.begin(), docs.end(), correct_order);
 
-                /*Ввод и вывод массива*/
-                for (int i = 0; i < 2; i++)
+                cout << "Контейнер после сортировки фамилий по алфавиту:\n\n";
+                for (dc = docs.begin(); dc != docs.end(); dc++)
                 {
-                    for (int j = 0; j < 2; j++)
+                    (*dc).print();
+                    cout << "\n";
+                }
+                
+                /*Поиск*/                
+                vector<Doctor>::iterator poisk;
+
+                cout << "\n\nВведите букву, на которую должно начинатся ФИО доктора: ";
+                cin >> s;
+
+                cout << "\nФИО, удовлетворяющие запросу: \n";
+                for (dc = docs.begin(); dc != docs.end(); dc++)
+                {
+                    poisk = find_if(dc, docs.end(), search_book);
+                    dc = poisk;
+                    if (poisk != docs.end())
                     {
-                        pat[i][j] = *new Patient();
-                        pat[i][j].vvod();                       
+                        (*dc).print();
+                        cout << "\n";
                     }
                 }
 
-                /*Вывод массива*/
-                for (int i = 0; i < 2; i++)
-                {
-                    for (int j = 0; j < 2; j++)
-                    {
-                        pat[i][j].print();
-                    }
-                }               
-                _getch();
-                break;
-            }
-
-            case 56:
-            {
-                system("CLS");
-                Cabinet cab;
-                cab.vvod();
-                cab.print();
                 _getch();
                 break;
             }
@@ -239,13 +210,13 @@ int main()
 
     } while (mainmenu != 27);
 
-    cout << "\n";
+    /*cout << "\n";
     Usluga usl1("Xewq", 222);
     Usluga usl2(123);
     Usluga usl3;
 
     cout << usl1;
     cout << usl2;
-    cout << usl3;
+    cout << usl3;*/
 }
 
